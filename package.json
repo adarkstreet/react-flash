@@ -1,5 +1,5 @@
 {
-  "name": "react-flash",
+  "name": "@adarkstreet/react-flash",
   "version": "1.0.0",
   "description": "A self destructing react flash component",
   "main": "./dist/index.js",
@@ -9,7 +9,9 @@
     "url": "https://github.com/adarkstreet/react-flash"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build:dev": "NODE_ENV=development webpack",
+    "build:prod": "NODE_ENV=production webpack -p",
+    "prepublish": "npm run build:prod"
   },
   "keywords": [],
   "author": "adarkstreet",
